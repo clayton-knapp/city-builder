@@ -89,3 +89,27 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
+
+.image-container{
+    height:300px;
+    width:400px;
+}
+
+.parent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#slogan-input {
+    width: 4
+    00px;
+}
