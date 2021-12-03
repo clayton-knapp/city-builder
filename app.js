@@ -93,6 +93,7 @@ function displaySlogans() {
         //     - create <p> with content of each index of array and append to slogan display div
         const p = document.createElement('p');
         p.textContent = slogan;
+        p.classList.add('slogans');
         sloganDisplay.append(p);
     }
 }
