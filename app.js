@@ -19,12 +19,13 @@ const cityNameInput = document.querySelector('#city-name-input');
 const cityNameButton = document.querySelector('#city-name-button');
 const cityNameDisplay = document.querySelector('#city-name-display');
 
-// const soundDropdown = document.querySelector('#sound-dropdown');
 const birdsRadio = document.querySelector('#birds-radio');
 const rainRadio = document.querySelector('#rain-radio');
 const kittensRadio = document.querySelector('#kittens-radio');
 
 const audioPlayer = document.querySelector('#audio-player');
+
+const historyDisplay = document.querySelector('#history-display');
 
 // let state
 let sloganArray = [];
@@ -32,6 +33,8 @@ let villageCount = 0;
 let castleCount = 0;
 let waterCount = 0;
 let cityName = '';
+
+let historyArray = [];
 
 // set event listeners 
   // get user input
@@ -48,6 +51,9 @@ villageDropdown.addEventListener('change', ()=>{
     villageCount++;
     //     - update the DOM with new count
     displayStats();
+    //log change to history array
+    historyArray.push(`The ${villageDropdown.name} was changed to ${userVillage}.`);
+    displayHistory();
 });
 
 castleDropdown.addEventListener('change', ()=>{
@@ -60,6 +66,8 @@ castleDropdown.addEventListener('change', ()=>{
     castleCount++;
     //     - update the DOM with new count
     displayStats();
+    historyArray.push(`The ${castleDropdown.name} was changed to ${userCastle}.`);
+    displayHistory();
 });
 
 waterDropdown.addEventListener('change', ()=>{
@@ -72,27 +80,29 @@ waterDropdown.addEventListener('change', ()=>{
     waterCount++;
     //     - update the DOM with new count
     displayStats();
+    historyArray.push(`The ${waterDropdown.name} was changed to ${userWater}.`);
+    displayHistory();
 });
-
-// soundDropdown.addEventListener('change', ()=>{
-//     const userSound = soundDropdown.value;
-//     audioPlayer.src = `./assets/${userSound}`;
-
-// });
 
 birdsRadio.addEventListener('click', ()=>{
     const userSound = birdsRadio.value;
     audioPlayer.src = `./assets/${userSound}`;
+    historyArray.push(`The ${birdsRadio.name} was changed to ${userSound}.`);
+    displayHistory();
 });
 
 rainRadio.addEventListener('click', ()=>{
     const userSound = rainRadio.value;
     audioPlayer.src = `./assets/${userSound}`;
+    historyArray.push(`The ${rainRadio.name} was changed to ${userSound}.`);
+    displayHistory();
 });
 
 kittensRadio.addEventListener('click', ()=>{
     const userSound = kittensRadio.value;
     audioPlayer.src = `./assets/${userSound}`;
+    historyArray.push(`The ${kittensRadio.name} was changed to ${userSound}.`);
+    displayHistory();
 });
 
 sloganButton.addEventListener('click', ()=> {
@@ -114,6 +124,8 @@ cityNameButton.addEventListener('click', ()=>{
     cityName = cityNameInput.value;
     //update DOM - change header to display city name
     cityNameDisplay.textContent = cityName;
+    historyArray.push(`The ${cityNameButton.name} was changed to ${cityName}.`);
+    displayHistory();
 });
 
 //FUNCTIONS
@@ -134,5 +146,15 @@ function displaySlogans() {
         p.textContent = cityName + ': ' + slogan;
         p.classList.add('slogans');
         sloganDisplay.append(p);
+    }
+}
+
+function displayHistory() {
+    historyDisplay.textContent = '';
+    for (let historyItem of historyArray) {
+        const p = document.createElement('p');
+        p.textContent = historyItem;
+        p.classList.add('history');
+        historyDisplay.append(p);
     }
 }
