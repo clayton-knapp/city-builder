@@ -113,3 +113,12 @@ footer {
     width: 4
     00px;
 }
+
+.image-container {
+    background-size: cover;
+}
+
+#slogan-display {
+    font-family: cursive;
+    font-size: 2em;
+}
