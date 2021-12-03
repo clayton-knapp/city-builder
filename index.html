@@ -19,49 +19,62 @@
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
-        </section>
+        <h1>City Builder!</h1>
+        <label for="">
+            Name Your City:
+            <input type="string" id="city-name-input">
+            <button id="city-name-button">Submit City Name</button>
+        </label>
+        <h2 id="city-name-display"></h2>
+        <div class="parent-container">
+            <div class="child-container"> 
+                <label for="">
+                    Select your village:
+                    <select name="village" id="village-dropdown">
+                        <option value="poor">Poor Village</option>
+                        <option value="rich">Rich Village</option>
+                        <option value="tropical">Tropical Village</option>
+                    </select>
+                </label>
+                <div class="image-container" id="village-container">
+                </div>
+            </div>
+            <div class="child-container"> 
+                <label for="">
+                    Select your castle:
+                    <select name="castle" id="castle-dropdown">
+                        <option value="asian">Asian Castle</option>
+                        <option value="english">English Castle</option>
+                        <option value="german">German Castle</option>
+                    </select>
+                </label>
+                <div class="image-container" id="castle-container">
+                </div>
+            </div>
+            <div class="child-container"> 
+                <label for="">
+                    Select your water feature:
+                    <select name="water" id="water-dropdown">
+                        <option value="pool">Pool</option>
+                        <option value="bathhouse">Bathhouse</option>
+                        <option value="riverspot">Riverspot</option>
+                    </select>
+                </label>
+                <div class="image-container" id="water-container">
+                </div>
+            </div>
+        </div>
+        <label>
+            Enter Your City's Slogan Here:
+            <input type="text" id="slogan-input">
+            <button class=button id=slogan-button>Submit Slogan</button>
+        </label>
+        <div id=count-display>
+            Counts Display Here
+        </div>
+        <div id=slogan-display>
+            Slogans Display Here
+        </div>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
