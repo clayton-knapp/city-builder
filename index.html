@@ -26,6 +26,27 @@
             <button id="city-name-button">Submit City Name</button>
         </label>
         <h2 id="city-name-display"></h2>
+        <div>
+            Choose your background sound:
+            <!-- <select name="sound" id="sound-dropdown">
+                <option value="birds.mp3">Birds</option>
+                <option value="rain.mp3">Rain</option>
+                <option value="kittens.flac">Kittens</option>
+            </select> -->
+
+            <audio id="audio-player" autoplay loop>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+            
+            <br>
+            <input type="radio" name="sounds" id="birds-radio" value="birds.mp3">
+            <label for="birds">Birds</label><br>
+            <input type="radio" name="sounds" id="rain-radio" value="rain.mp3">
+            <label for="rain">Rain</label><br>
+            <input type="radio" name="sounds" id="kittens-radio" value="kittens.flac">
+            <label for="kittens">Kittens</label><br>
+        </div>
         <div class="parent-container">
             <div class="child-container"> 
                 <label for="">

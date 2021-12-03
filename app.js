@@ -19,6 +19,12 @@ const cityNameInput = document.querySelector('#city-name-input');
 const cityNameButton = document.querySelector('#city-name-button');
 const cityNameDisplay = document.querySelector('#city-name-display');
 
+// const soundDropdown = document.querySelector('#sound-dropdown');
+const birdsRadio = document.querySelector('#birds-radio');
+const rainRadio = document.querySelector('#rain-radio');
+const kittensRadio = document.querySelector('#kittens-radio');
+
+const audioPlayer = document.querySelector('#audio-player');
 
 // let state
 let sloganArray = [];
@@ -66,6 +72,27 @@ waterDropdown.addEventListener('change', ()=>{
     waterCount++;
     //     - update the DOM with new count
     displayStats();
+});
+
+// soundDropdown.addEventListener('change', ()=>{
+//     const userSound = soundDropdown.value;
+//     audioPlayer.src = `./assets/${userSound}`;
+
+// });
+
+birdsRadio.addEventListener('click', ()=>{
+    const userSound = birdsRadio.value;
+    audioPlayer.src = `./assets/${userSound}`;
+});
+
+rainRadio.addEventListener('click', ()=>{
+    const userSound = rainRadio.value;
+    audioPlayer.src = `./assets/${userSound}`;
+});
+
+kittensRadio.addEventListener('click', ()=>{
+    const userSound = kittensRadio.value;
+    audioPlayer.src = `./assets/${userSound}`;
 });
 
 sloganButton.addEventListener('click', ()=> {
