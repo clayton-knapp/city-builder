@@ -15,6 +15,9 @@ const sloganButton = document.querySelector('#slogan-button');
 const countDisplay = document.querySelector('#count-display');
 const sloganDisplay = document.querySelector('#slogan-display');
 
+const cityNameInput = document.querySelector('#city-name-input');
+const cityNameButton = document.querySelector('#city-name-button');
+const cityNameDisplay = document.querySelector('#city-name-display');
 
 
 // let state
@@ -22,6 +25,7 @@ let sloganArray = [];
 let villageCount = 0;
 let castleCount = 0;
 let waterCount = 0;
+let cityName = '';
 
 // set event listeners 
   // get user input
@@ -78,6 +82,14 @@ sloganButton.addEventListener('click', ()=> {
     displaySlogans();
 });
 
+cityNameButton.addEventListener('click', ()=>{
+    // When user clicks button it stores the name in state and displays it in a header
+    cityName = cityNameInput.value;
+    //update DOM - change header to display city name
+    cityNameDisplay.textContent = cityName;
+});
+
+//FUNCTIONS
 function displayStats() {
     //calls createCountString function with arguments of 3 counts which returns the string of text and puts that in display div
     countDisplay.textContent = createCountString(villageCount, castleCount, waterCount);
@@ -92,7 +104,7 @@ function displaySlogans() {
     for (let slogan of sloganArray) {
         //     - create <p> with content of each index of array and append to slogan display div
         const p = document.createElement('p');
-        p.textContent = slogan;
+        p.textContent = cityName + ': ' + slogan;
         p.classList.add('slogans');
         sloganDisplay.append(p);
     }
