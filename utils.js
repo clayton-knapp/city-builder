@@ -11,5 +11,5 @@ export function createCountString(villageCount, castleCount, waterCount) {
     if (waterCount === 1) {
         waterPlural = '';
     }
-    return `You have changed the village ${villageCount} time${villagePlural}. You have changed the castle ${castleCount} time${castlePlural}. You have changed the water feature ${waterCount} time${villagePlural}.`;
+    return `You have changed the village ${villageCount} time${villagePlural}. You have changed the castle ${castleCount} time${castlePlural}. You have changed the water feature ${waterCount} time${waterPlural}.`;
 }

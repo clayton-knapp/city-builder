@@ -36,6 +36,30 @@ let cityName = '';
 
 let historyArray = [];
 
+//STRETCH GOAL - ARRAY OF OBJECTS
+let villageDropdownArray = [
+    { display: 'Poor Village', value: 'poor', dropdown: villageDropdown },
+    { display: 'Rich Village', value: 'rich', dropdown: villageDropdown },
+    { display: 'Tropical Village', value: 'tropical', dropdown: villageDropdown }
+];
+
+let castleDropdownArray = [
+    { display: 'Asian Castle', value: 'asian', dropdown: castleDropdown },
+    { display: 'English Castle', value: 'english', dropdown: castleDropdown },
+    { display: 'German Castle', value: 'german', dropdown: castleDropdown }
+];
+
+let waterDropdownArray = [
+    { display: 'Pool', value: 'pool', dropdown: waterDropdown },
+    { display: 'Bathhouse', value: 'bathhouse', dropdown: waterDropdown },
+    { display: 'Riverspot', value: 'riverspot', dropdown: waterDropdown }
+    
+];
+
+renderDropdowns(villageDropdownArray);
+renderDropdowns(castleDropdownArray);
+renderDropdowns(waterDropdownArray);
+
 // set event listeners 
   // get user input
   // use user input to update state 
@@ -157,4 +181,29 @@ function displayHistory() {
         p.classList.add('history');
         historyDisplay.append(p);
     }
+}
+
+//STRETCH - ARRAY OF OBJECTS - RENDER DROPDOWNS
+function renderDropdowns(whichDropdownArray) {
+    
+    for (let eachItem of whichDropdownArray) {
+        const optionEl = document.createElement('option');
+        optionEl.value = eachItem.value;
+        optionEl.textContent = eachItem.display;
+        eachItem.dropdown.append(optionEl);
+    }
+    
+    // for (let eachItem of castleDropdownArray) {
+    //     const optionEl = document.createElement('option');
+    //     optionEl.value = eachItem.value;
+    //     optionEl.textContent = eachItem.display;
+    //     eachItem.dropdown.append(optionEl);
+    // }
+    
+    // for (let eachItem of waterDropdownArray) {
+    //     const optionEl = document.createElement('option');
+    //     optionEl.value = eachItem.value;
+    //     optionEl.textContent = eachItem.display;
+    //     eachItem.dropdown.append(optionEl);
+    // }
 }
