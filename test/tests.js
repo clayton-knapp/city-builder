@@ -6,7 +6,7 @@ const test = QUnit.test;
 test('test if createCountString successfully returns the string with 3 given variables.', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected1 = 'You have changed the village 3 times. You have changed the castle 2 times. You have changed the water feature 1 times.';
+    const expected1 = 'You have changed the village 3 times. You have changed the castle 2 times. You have changed the water feature 1 time.';
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -14,7 +14,7 @@ test('test if createCountString successfully returns the string with 3 given var
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual1, expected1, 'should return: "You have changed the village 3 times. You have changed the castle 2 times. You have changed the water feature 1 times."');
+    expect.equal(actual1, expected1, 'should return: "You have changed the village 3 times. You have changed the castle 2 times. You have changed the water feature 1 time."');
 
     //Arrange
     // Set up your arguments and expectations
