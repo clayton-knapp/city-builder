@@ -10,7 +10,7 @@ const castleImageContainer = document.querySelector('#castle-container');
 const waterImageContainer = document.querySelector('#water-container');
 
 const sloganInput = document.querySelector('#slogan-input');
-const sloganButton = document.querySelector('#slogan-button');
+// const sloganButton = document.querySelector('#slogan-button');
 
 const countDisplay = document.querySelector('#count-display');
 const sloganDisplay = document.querySelector('#slogan-display');
@@ -26,6 +26,8 @@ const kittensRadio = document.querySelector('#kittens-radio');
 const audioPlayer = document.querySelector('#audio-player');
 
 const historyDisplay = document.querySelector('#history-display');
+
+const sloganForm = document.querySelector('#slogan-form');
 
 // let state
 let sloganArray = [];
@@ -129,18 +131,35 @@ kittensRadio.addEventListener('click', ()=>{
     displayHistory();
 });
 
-sloganButton.addEventListener('click', ()=> {
+// sloganButton.addEventListener('click', ()=> {
+//     // - get the value entered in input
+//     const userSlogan = sloganInput.value;
+
+//     // - push into array of slogans
+//     sloganArray.push(userSlogan);
+
+//     // reset input field
+//     sloganInput.value = '';
+
+//     // - update the DOM
+//     displaySlogans();
+// });
+
+sloganForm.addEventListener('submit', (e)=> {
     // - get the value entered in input
     const userSlogan = sloganInput.value;
-
+    
     // - push into array of slogans
     sloganArray.push(userSlogan);
-
-    // reset input field
+    
+        // reset input field
     sloganInput.value = '';
-
-    // - update the DOM
+        
+        // - update the DOM
     displaySlogans();
+
+    // let formData = new FormData
+    e.preventDefault();
 });
 
 cityNameButton.addEventListener('click', ()=>{
@@ -183,7 +202,7 @@ function displayHistory() {
     }
 }
 
-//STRETCH - ARRAY OF OBJECTS - RENDER DROPDOWNS
+//STRETCH - ARRAY OF OBJECTS RENDER DROPDOWNS
 function renderDropdowns(whichDropdownArray) {
     
     for (let eachItem of whichDropdownArray) {
@@ -192,18 +211,4 @@ function renderDropdowns(whichDropdownArray) {
         optionEl.textContent = eachItem.display;
         eachItem.dropdown.append(optionEl);
     }
-    
-    // for (let eachItem of castleDropdownArray) {
-    //     const optionEl = document.createElement('option');
-    //     optionEl.value = eachItem.value;
-    //     optionEl.textContent = eachItem.display;
-    //     eachItem.dropdown.append(optionEl);
-    // }
-    
-    // for (let eachItem of waterDropdownArray) {
-    //     const optionEl = document.createElement('option');
-    //     optionEl.value = eachItem.value;
-    //     optionEl.textContent = eachItem.display;
-    //     eachItem.dropdown.append(optionEl);
-    // }
 }
