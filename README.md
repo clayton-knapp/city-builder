@@ -72,3 +72,17 @@ EVENTS
 When user clicks button it stores the name in state and displays it in a header
 
 Change Slogan event listener so it concatenates the City name stored in state in front of the displayed slogan
+
+STRETCH
+
+In addition to keeping track of the number of times each dropdown was changed, keep track of (and display to the user) a "history" of those changes.
+
+HTML 
+Display History Div
+- to show an array of history
+
+EVENTS
+When user makes any change on any dropdown (maybe change background sound too)
+then it should display an array (similar to Slogan Array) of the history
+So any time something is changed that changed is pushed to an array
+then that array is appended to to a div (which is cleared first)

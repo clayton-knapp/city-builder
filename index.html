@@ -23,17 +23,31 @@
         <label for="">
             Name Your City:
             <input type="string" id="city-name-input">
-            <button id="city-name-button">Submit City Name</button>
+            <button id="city-name-button" name="city name">Submit City Name</button>
         </label>
         <h2 id="city-name-display"></h2>
+        <div>
+            Choose your background sound:
+            <br>
+            <input type="radio" name="sound" id="birds-radio" value="birds.mp3">
+            <label for="birds">Birds</label><br>
+            <input type="radio" name="sound" id="rain-radio" value="rain.mp3">
+            <label for="rain">Rain</label><br>
+            <input type="radio" name="sound" id="kittens-radio" value="kittens.flac">
+            <label for="kittens">Kittens</label><br>
+            <audio id="audio-player" autoplay loop>
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
         <div class="parent-container">
             <div class="child-container"> 
                 <label for="">
                     Select your village:
                     <select name="village" id="village-dropdown">
-                        <option value="poor">Poor Village</option>
+                        <!-- <option value="poor">Poor Village</option>
                         <option value="rich">Rich Village</option>
-                        <option value="tropical">Tropical Village</option>
+                        <option value="tropical">Tropical Village</option> -->
                     </select>
                 </label>
                 <div class="image-container" id="village-container">
@@ -43,9 +57,9 @@
                 <label for="">
                     Select your castle:
                     <select name="castle" id="castle-dropdown">
-                        <option value="asian">Asian Castle</option>
+                        <!-- <option value="asian">Asian Castle</option>
                         <option value="english">English Castle</option>
-                        <option value="german">German Castle</option>
+                        <option value="german">German Castle</option> -->
                     </select>
                 </label>
                 <div class="image-container" id="castle-container">
@@ -55,25 +69,27 @@
                 <label for="">
                     Select your water feature:
                     <select name="water" id="water-dropdown">
-                        <option value="pool">Pool</option>
+                        <!-- <option value="pool">Pool</option>
                         <option value="bathhouse">Bathhouse</option>
-                        <option value="riverspot">Riverspot</option>
+                        <option value="riverspot">Riverspot</option> -->
                     </select>
                 </label>
                 <div class="image-container" id="water-container">
                 </div>
             </div>
         </div>
-        <label>
-            Enter Your City's Slogan Here:
+        <form action="" id="slogan-form">
+            <label for="slogan-input">Enter Your Slogan:</label>
             <input type="text" id="slogan-input">
-            <button class=button id=slogan-button>Submit Slogan</button>
-        </label>
+            <input type="submit" id="slogan-button" value="Submit Slogan">
+            <!-- <button class=button id=slogan-button>Submit Slogan</button> -->
+        </form>
         <div id=count-display>
-            Counts Display Here
         </div>
         <div id=slogan-display>
-            Slogans Display Here
+        </div>
+        <h3>User History:</h3>
+        <div id="history-display">
         </div>
     </main>
     <footer>

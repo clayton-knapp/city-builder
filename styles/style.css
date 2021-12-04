@@ -141,3 +141,13 @@ label {
 #count-display {
     width: 400px;
 }
+
+.history {
+    padding: 0px;
+    margin: 5px;
+}
+
+#history-display {
+    margin: 20px;
+    /* padding: 50px; */
+}
